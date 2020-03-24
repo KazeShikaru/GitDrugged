@@ -5,17 +5,18 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Intent;
 
+import androidx.core.app.JobIntentService;
 import androidx.core.app.NotificationManagerCompat;
 
-public class NotifIntentService extends IntentService {
+public class NotifIntentService extends JobIntentService {
     private static final int NOTIFICATION_ID = 3;
 
     public NotifIntentService() {
-        super("MyNewIntentService");
+
     }
 
     @Override
-    protected void onHandleIntent(Intent intent) {
+    protected void onHandleWork(Intent intent) {
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("My Title");
         builder.setContentText("This is the Body");
