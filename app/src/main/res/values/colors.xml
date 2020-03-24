@@ -2,7 +2,7 @@
 <resources>
     <color name="PHGray">#808080</color>
     <color name="PHDarkGrey">#292929</color>
-    <color name="PHBlack">#1b1b1b</color>
-    <color name="PHOrange">#ffa31a</color>
+    <color name="PHBlack">#1B1B1B</color>
+    <color name="PHOrange">#FFA31A</color>
     <color name="PHWhite">#ffffff</color>
 </resources>
