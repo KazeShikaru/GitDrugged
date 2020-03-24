@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
-
     public void setAlarm(View view){
         Intent notifyIntent = new Intent(this,NotifReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast
@@ -28,4 +26,7 @@ public class MainActivity extends AppCompatActivity {
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
                 1000 * 60 * 60 * 24, pendingIntent);
     }
+
+
+
 }
