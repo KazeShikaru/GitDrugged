@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/PHBlack"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="162dp"
+        android:layout_margin="20"
+        android:fontFamily="@font/headland_one"
+        android:text="You have 4 minutes left to live"
+        android:textColor="@color/PHOrange" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="4dp">
+
+        <TextView
+            android:id="@+id/rem_txt_cal_1"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_2"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="2"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_3"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="3"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_4"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="4"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+            android:text="TextView"
+            android:textColor="@color/PHDarkGrey" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_5"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="5"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_6"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="6"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_7"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="7"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="4dp"
+        android:background="@color/PHGray"
+        android:backgroundTint="@color/PHGray">
+
+        <TextView
+            android:id="@+id/rem_txt_cal_8"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="8"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_9"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="9"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_10"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="10"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_11"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="11"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_12"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="12"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_13"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="13"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_14"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="14"
+            android:textAlignment="center"
+            android:textColor="@color/PHDarkGrey"
+            android:textSize="24sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="4dp"
+        android:background="@color/PHGray"
+        android:backgroundTint="@color/PHGray">
+
+        <TextView
+            android:id="@+id/rem_txt_cal_15"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="15"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_16"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="16"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_17"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="17"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_18"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="18"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_19"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="19"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_20"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="20"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_21"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="21"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="4dp"
+        android:background="@color/PHGray"
+        android:backgroundTint="@color/PHGray">
+
+        <TextView
+            android:id="@+id/rem_txt_cal_22"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="22"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_23"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="23"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_24"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="24"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_25"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="25"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_26"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="26"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_27"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="27"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_28"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="28"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="4dp"
+        android:background="@color/PHGray"
+        android:backgroundTint="@color/PHGray">
+
+        <TextView
+            android:id="@+id/rem_txt_cal_29"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="29"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_30"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="30"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_31"
+            android:layout_width="59"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="31"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20"
+        android:backgroundTint="@color/PHOrange"
+        android:text="Confirm"
+        android:fontFamily="@font/headland_one"
+        android:textColor="@color/PHDarkGrey" />
+
+</LinearLayout>
