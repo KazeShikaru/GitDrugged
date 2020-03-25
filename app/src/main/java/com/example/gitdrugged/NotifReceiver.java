@@ -3,6 +3,7 @@ package com.example.gitdrugged;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 public class NotifReceiver extends BroadcastReceiver {
     public NotifReceiver() {
@@ -11,7 +12,7 @@ public class NotifReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        Intent intent1 = new Intent(context, NotifIntentService.class);
-        context.startService(intent1);
+        String message = intent.getStringExtra("toastMessage");
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 }
