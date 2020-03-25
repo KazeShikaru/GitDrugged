@@ -12,8 +12,11 @@
         android:layout_height="162dp"
         android:layout_margin="20"
         android:fontFamily="@font/headland_one"
-        android:text="TextView"
-        android:textColor="@color/PHOrange" />
+        android:text="It is time to do drugs!"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/PHOrange"
+        android:textSize="30sp" />
 
     <TableRow
         android:layout_width="match_parent"
