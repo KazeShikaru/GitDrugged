@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/PHBlack"
@@ -10,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="162dp"
-        android:layout_margin="20"
+        android:layout_margin="20dp"
         android:fontFamily="@font/headland_one"
         android:text="You have 4 minutes left to live"
         android:textColor="@color/PHOrange" />
@@ -64,8 +65,8 @@
             android:textAlignment="center"
             android:textColor="@color/PHDarkGrey"
             android:textSize="24sp" />
-            android:text="TextView"
-            android:textColor="@color/PHDarkGrey" />
+        android:text="TextView"
+        android:textColor="@color/PHDarkGrey" />
 
         <TextView
             android:id="@+id/rem_txt_cal_5"
@@ -199,7 +200,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_15"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -209,7 +210,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_16"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -219,7 +220,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_17"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -229,7 +230,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_18"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -239,7 +240,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_19"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -249,7 +250,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_20"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -259,7 +260,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_21"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -279,7 +280,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_22"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -289,7 +290,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_23"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -299,7 +300,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_24"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -309,7 +310,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_25"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -319,7 +320,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_26"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -329,7 +330,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_27"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -339,7 +340,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_28"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -359,7 +360,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_29"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -369,7 +370,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_30"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -379,7 +380,7 @@
 
         <TextView
             android:id="@+id/rem_txt_cal_31"
-            android:layout_width="59"
+            android:layout_width="59dp"
             android:layout_height="match_parent"
             android:background="@color/PHGray"
             android:backgroundTint="@color/PHGray"
@@ -393,10 +394,10 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20"
+        android:layout_margin="20dp"
         android:backgroundTint="@color/PHOrange"
-        android:text="Confirm"
         android:fontFamily="@font/headland_one"
+        android:text="Confirm"
         android:textColor="@color/PHDarkGrey" />
 
 </LinearLayout>
