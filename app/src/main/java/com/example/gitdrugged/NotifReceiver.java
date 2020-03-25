@@ -12,7 +12,7 @@ public class NotifReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        String message = intent.getStringExtra("toastMessage");
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        Intent intent1 = new Intent(context, NotifIntentService.class);
+        context.startService(intent1);
     }
 }
