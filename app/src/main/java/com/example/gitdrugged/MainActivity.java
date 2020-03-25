@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         notificationManager.notify(1, notification);
+        AlarmManager alarmManager = (AlarmManager) v.getContext().getSystemService(Context.ALARM_SERVICE);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
+                1000 * 60 * 60 * 24, contentIntent);
 
     }
 
