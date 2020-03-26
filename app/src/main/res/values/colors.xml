@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="PHGray">#808080</color>
-    <color name="PHDarkGrey">#292929</color>
+    <color name="PHDarkGray">#292929</color>
     <color name="PHBlack">#1B1B1B</color>
     <color name="PHOrange">#FFA31A</color>
     <color name="PHWhite">#ffffff</color>

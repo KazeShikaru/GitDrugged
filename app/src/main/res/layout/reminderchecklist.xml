@@ -120,7 +120,7 @@
         android:backgroundTint="@color/PHOrange"
         android:text="Confirm"
         android:fontFamily="@font/headland_one"
-        android:textColor="@color/PHDarkGrey"
+        android:textColor="@color/PHDarkGray"
         android:onClick="moveToCalender"/>
 
 

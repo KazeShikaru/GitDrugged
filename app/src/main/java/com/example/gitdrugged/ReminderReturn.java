@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class ReminderReturn extends AppCompatActivity {
     public int day;
     public String[] checklist;
-    public String[] defaultList ={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"};
+    public String[] defaultList ={"10","★","★","★","★","★","★","☆","★","★","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +27,21 @@ public class ReminderReturn extends AppCompatActivity {
 
     }
 
+    public void initSetup(View view){
+        checklist = defaultList.clone();
+        saveData(view);
+    }
+
     public void moveToCalender(View view){
+        
 
         setContentView(R.layout.calender);
+        loadCalender();
+    }
 
+    public void moveToMain(View view){
+
+        setContentView(R.layout.activity_main);
     }
 
     public void loadData(View view){
@@ -59,11 +70,11 @@ public class ReminderReturn extends AppCompatActivity {
     public void saveData(View view){
 
         String filename = "dateChecked.txt";
-        String s2Write = "";
+        String s2Write = ""+day;
         for(String s: checklist){
             s2Write+=","+s;
         }
-        s2Write = s2Write.substring(1);
+        //s2Write = s2Write.substring(1);
         //test to see if input is digits
         try {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(view.getContext().openFileOutput(filename, view.getContext().MODE_PRIVATE));
@@ -109,38 +120,38 @@ public class ReminderReturn extends AppCompatActivity {
         TextView txt29 = findViewById(R.id.rem_txt_cal_29);
         TextView txt30 = findViewById(R.id.rem_txt_cal_30);
         TextView txt31 = findViewById(R.id.rem_txt_cal_31);
-        txt1.setText(checklist[0]);
-        txt2.setText(checklist[1]);
-        txt3.setText(checklist[2]);
-        txt4.setText(checklist[3]);
-        txt5.setText(checklist[4]);
-        txt6.setText(checklist[5]);
-        txt7.setText(checklist[6]);
-        txt8.setText(checklist[7]);
-        txt9.setText(checklist[8]);
-        txt10.setText(checklist[9]);
-        txt11.setText(checklist[10]);
-        txt12.setText(checklist[11]);
-        txt13.setText(checklist[12]);
-        txt14.setText(checklist[13]);
-        txt15.setText(checklist[14]);
-        txt16.setText(checklist[15]);
-        txt17.setText(checklist[16]);
-        txt18.setText(checklist[17]);
-        txt19.setText(checklist[18]);
-        txt20.setText(checklist[19]);
-        txt21.setText(checklist[20]);
-        txt22.setText(checklist[21]);
-        txt23.setText(checklist[22]);
-        txt24.setText(checklist[23]);
-        txt25.setText(checklist[24]);
-        txt26.setText(checklist[25]);
-        txt27.setText(checklist[26]);
-        txt28.setText(checklist[27]);
-        txt29.setText(checklist[28]);
-        txt30.setText(checklist[29]);
-        txt31.setText(checklist[30]);
-
+        txt1.setText(checklist[1]);
+        txt2.setText(checklist[2]);
+        txt3.setText(checklist[3]);
+        txt4.setText(checklist[4]);
+        txt5.setText(checklist[5]);
+        txt6.setText(checklist[6]);
+        txt7.setText(checklist[7]);
+        txt8.setText(checklist[8]);
+        txt9.setText(checklist[9]);
+        txt10.setText(checklist[10]);
+        txt11.setText(checklist[11]);
+        txt12.setText(checklist[12]);
+        txt13.setText(checklist[13]);
+        txt14.setText(checklist[14]);
+        txt15.setText(checklist[15]);
+        txt16.setText(checklist[16]);
+        txt17.setText(checklist[17]);
+        txt18.setText(checklist[18]);
+        txt19.setText(checklist[19]);
+        txt20.setText(checklist[20]);
+        txt21.setText(checklist[21]);
+        txt22.setText(checklist[22]);
+        txt23.setText(checklist[23]);
+        txt24.setText(checklist[24]);
+        txt25.setText(checklist[25]);
+        txt26.setText(checklist[26]);
+        txt27.setText(checklist[27]);
+        txt28.setText(checklist[28]);
+        txt29.setText(checklist[29]);
+        txt30.setText(checklist[30]);
+        txt31.setText(checklist[31]);
+        day = Integer.parseInt(checklist[0]);
     }
 
     public void checkCalender(boolean drugged, int date){
