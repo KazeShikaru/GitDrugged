@@ -3,6 +3,7 @@ package com.example.gitdrugged;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 
 public class ReminderReturn extends AppCompatActivity {
     public int day;
+    public int drugCount;
     public String[] checklist;
     public String[] defaultList ={"10","★","★","★","★","★","★","☆","★","★","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"};
 
@@ -24,6 +26,8 @@ public class ReminderReturn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reminderchecklist);
+        day = 10;
+        drugCount= 4;
 
     }
 
@@ -35,14 +39,30 @@ public class ReminderReturn extends AppCompatActivity {
     public void moveToCalender(View view){
 
 
-        setContentView(R.layout.calender);
+
         //initSetup(view);
         loadData(view);
+        int drugsTakenCurrently=4;
+        int drugsTaken = 0;
+        CheckBox chk1 = findViewById(R.id.rem_chk1);
+        if(chk1.isChecked()){drugsTaken++;};
+        CheckBox chk2 = findViewById(R.id.rem_chk2);
+        if(chk2.isChecked()){drugsTaken++;};
+        CheckBox chk3 = findViewById(R.id.rem_chk3);
+        if(chk3.isChecked()){drugsTaken++;};
+        CheckBox chk4 = findViewById(R.id.rem_chk4);
+        if(chk4.isChecked()){drugsTaken++;};
+        System.out.print("got HEre");
+        if(drugsTaken<drugsTakenCurrently){
+            checkCalender(false,day);
+        }else{
+            checkCalender(true,day);
+        }
+        setContentView(R.layout.calender);
         loadCalender();
     }
 
     public void moveToMain(View view){
-
         setContentView(R.layout.activity_main);
     }
 
@@ -84,6 +104,7 @@ public class ReminderReturn extends AppCompatActivity {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(view.getContext().openFileOutput(filename, view.getContext().MODE_PRIVATE));
             outputStreamWriter.write(s2Write);
             outputStreamWriter.close();
+            
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -160,9 +181,9 @@ public class ReminderReturn extends AppCompatActivity {
 
     public void checkCalender(boolean drugged, int date){
         if(drugged){
-            checklist[date-1] = "★";
+            checklist[date] = "★";
         }else{
-            checklist[date-1] = "☆";
+            checklist[date] = "☆";
         }
 
     }
