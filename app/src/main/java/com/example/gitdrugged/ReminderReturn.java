@@ -33,9 +33,11 @@ public class ReminderReturn extends AppCompatActivity {
     }
 
     public void moveToCalender(View view){
-        
+
 
         setContentView(R.layout.calender);
+        //initSetup(view);
+        loadData(view);
         loadCalender();
     }
 
@@ -55,6 +57,8 @@ public class ReminderReturn extends AppCompatActivity {
                 String receiveString = "";
 
                 if ( (receiveString = bufferedReader.readLine()) != null ) {
+
+                    receiveString= receiveString.substring(1);
                     checklist = receiveString.split(",");
                 }
 
@@ -70,7 +74,7 @@ public class ReminderReturn extends AppCompatActivity {
     public void saveData(View view){
 
         String filename = "dateChecked.txt";
-        String s2Write = ""+day;
+        String s2Write = "";
         for(String s: checklist){
             s2Write+=","+s;
         }
