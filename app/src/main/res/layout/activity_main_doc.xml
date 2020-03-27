@@ -8,128 +8,65 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/logoPadding"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <ImageView
-        android:id="@+id/loginLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoPadding"
-        />
-
-    <TextView
-        android:id="@+id/userPadding"
+        android:id="@+id/backPad"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <ImageView
-        android:id="@+id/userImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/user"
-        android:onClick="onUserClicked"
-        app:layout_constraintRight_toLeftOf="@id/userPadding"
-        app:layout_constraintTop_toBottomOf="@id/userPadding"
-        />
-
-    <TextView
-        android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GitDrugged Caretaker Client"
-        android:textSize="26dp"
-        android:textColor="@color/PHOrange"
-        app:layout_constraintTop_toBottomOf="@id/loginLogo"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/welcomePadding"
+    <Button
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appTitle"
-        />
-
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome back, John"
-        android:textSize="30dp"
-        android:textColor="@color/PHOrange"
-        app:layout_constraintTop_toBottomOf="@id/welcomePadding"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/uidText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UID: 852456"
-        android:textSize="20dp"
-        android:textColor="@color/PHOrange"
-        app:layout_constraintTop_toBottomOf="@id/welcomeText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        android:layout_height="30dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginEnd="304dp"
+        android:background="@color/PHOrange"
+        android:onClick="returnToMain"
+        android:text="Back"
+        android:textColor="@color/PHBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/backPad"
+        tools:layout_editor_absoluteY="47dp" />
 
     <TextView
         android:id="@+id/pad1"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="20dp"
+        android:layout_height="200dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcomeText"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/manageButton"
+        android:id="@+id/idAddButton"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Manage Patient"
+        android:background="@color/PHOrange"
+        android:onClick="onIDAddClicked"
+        android:text="Add Through ID"
         android:textColor="@color/PHBlack"
         android:textSize="20dp"
-        android:background="@color/PHOrange"
-        android:onClick="onManageClicked"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pad1"
-        />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pad1" />
 
     <TextView
         android:id="@+id/pad2"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_width="20dp"
+        android:layout_height="300dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/manageButton"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/addButton"
+        android:id="@+id/qrAddButton"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Add Patient"
+        android:text="Add Through QR"
         android:textColor="@color/PHBlack"
         android:textSize="20dp"
         android:background="@color/PHOrange"
-        android:onClick="onAddClicked"
+        android:onClick="onQRAddClicked"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pad2"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

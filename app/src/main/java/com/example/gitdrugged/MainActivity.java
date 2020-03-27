@@ -22,7 +22,6 @@ import static com.example.gitdrugged.App.CHANNEL_1_ID;
 public class MainActivity extends AppCompatActivity {
     private NotificationManagerCompat notificationManager;
     public static String pid = "";
-    public static boolean exist = false;
     public static ArrayList<UserObject> user = new ArrayList<UserObject>();
 
     @Override
@@ -90,31 +89,20 @@ public class MainActivity extends AppCompatActivity {
         return "drug1,d,14,drug2,w,2";
 
     }
-
-    public void onAddClicked(android.view.View view) {
-        Intent intent = new Intent(this, AddPatientActivity.class);
-        startActivity(intent);
+    public void onIDAddClicked(View view) {
+        setContentView(R.layout.activity_idadd);
     }
 
-    public void onManageClicked(android.view.View view) {
-        Intent intent = new Intent(this, ManagePatientActivity.class);
-        startActivity(intent);
+    public void onQRAddClicked(View view) {
+        setContentView(R.layout.activity_qradd);
     }
 
-    public void onUserClicked(android.view.View view) {
-        Intent intent = new Intent(this, CheckUserActivity.class);
-        startActivity(intent);
+    public void onBackClicked(View view) {
+        setContentView(R.layout.activity_main_doc);
     }
 
-    public static void rick() {
-        exist = true;
+    public void onImageClicked(View view){
+        setContentView(R.layout.activity_new_doctor);
     }
 
-    public static void rickrick() {
-        exist = true;
-    }
-
-    public static void obama() {
-        exist = true;
-    }
 }
