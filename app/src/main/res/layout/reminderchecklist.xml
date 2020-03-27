@@ -30,7 +30,7 @@
             android:layout_width="234dp"
             android:layout_height="match_parent"
             android:buttonTint="@color/PHGray"
-            android:text="CheckBox"
+            android:text="Drug1"
             android:textColor="@color/PHOrange"
             android:fontFamily="@font/headland_one"
             android:visibility="visible" />
@@ -54,7 +54,7 @@
             android:layout_width="234dp"
             android:layout_height="match_parent"
             android:buttonTint="@color/PHGray"
-            android:text="CheckBox"
+            android:text="Drug2"
             android:textColor="@color/PHOrange"
             android:fontFamily="@font/headland_one"
             android:visibility="visible" />
@@ -77,7 +77,7 @@
             android:layout_width="234dp"
             android:layout_height="match_parent"
             android:buttonTint="@color/PHGray"
-            android:text="CheckBox"
+            android:text="Drug3"
             android:textColor="@color/PHOrange"
             android:fontFamily="@font/headland_one"
             android:visibility="visible" />
@@ -100,7 +100,7 @@
             android:layout_width="234dp"
             android:layout_height="match_parent"
             android:buttonTint="@color/PHGray"
-            android:text="CheckBox"
+            android:text="Drug4"
             android:textColor="@color/PHOrange"
             android:fontFamily="@font/headland_one"
             android:visibility="visible" />

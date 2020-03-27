@@ -213,7 +213,7 @@
                     android:text="DONE"
                     android:textSize="60dp"
                     android:textColor="@color/PHBlack"
-                    android:background="@color/PHGray"/>
+                    android:background="@color/PHOrange"/>
 
 
             </LinearLayout>
