@@ -51,6 +51,8 @@ public class LoginActivity extends AppCompatActivity {
                 else if(i==infoArr.length){
                     showLoginFailed("Either username does not exist or password does match");
                 }
+                Intent in = new Intent(LoginActivity.this, YourDrugs.class);
+                startActivity(in);
             }
         });
     }
