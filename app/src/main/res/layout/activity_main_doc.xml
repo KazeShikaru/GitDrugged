@@ -137,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:background="@color/PHOrange"
-        android:onClick="returnToMain"
+        android:onClick="onReturnClicked"
         android:text="back"
         android:textColor="@color/PHBlack"
         android:textSize="20dp"

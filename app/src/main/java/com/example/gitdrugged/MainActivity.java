@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void moveToDoctorView(View view){
 
-        setContentView(R.layout.activity_main_doc);
+        Intent intent = new Intent(this, MainDoctorActivity.class);
+        startActivity(intent);
     }
 
     public void moveToCalender(View view){
@@ -91,30 +92,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onAddClicked(android.view.View view) {
-        Intent intent = new Intent(this, AddPatientActivity.class);
-        startActivity(intent);
-    }
 
-    public void onManageClicked(android.view.View view) {
-        Intent intent = new Intent(this, ManagePatientActivity.class);
-        startActivity(intent);
-    }
-
-    public void onUserClicked(android.view.View view) {
-        Intent intent = new Intent(this, CheckUserActivity.class);
-        startActivity(intent);
-    }
-
-    public static void rick() {
-        exist = true;
-    }
-
-    public static void rickrick() {
-        exist = true;
-    }
-
-    public static void obama() {
-        exist = true;
-    }
 }

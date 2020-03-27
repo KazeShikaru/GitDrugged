@@ -48,7 +48,7 @@ public class ManagePatientActivity extends AppCompatActivity {
     }
 
     public void onBackClicked(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainDoctorActivity.class);
         startActivity(intent);
     }
 

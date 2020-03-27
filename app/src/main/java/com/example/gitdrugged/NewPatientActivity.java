@@ -20,7 +20,7 @@ public class NewPatientActivity extends AppCompatActivity {
             txtvw.setText("123456");
             MainActivity.user.add(new UserObject("Rick A.", "123456"));
             exists = true;
-            MainActivity.rick();
+            MainDoctorActivity.rick();
         }
         else if(MainActivity.pid.equals("654321")) {
             TextView txtvw =(TextView)findViewById(R.id.nameData);
@@ -29,7 +29,7 @@ public class NewPatientActivity extends AppCompatActivity {
             txtvw.setText("654321");
             MainActivity.user.add(new UserObject("Rick B.", "654321"));
             exists = true;
-            MainActivity.rickrick();
+            MainDoctorActivity.rickrick();
         }
         else if(MainActivity.pid.equals("481961")) {
             TextView txtvw =(TextView)findViewById(R.id.nameData);
@@ -38,7 +38,7 @@ public class NewPatientActivity extends AppCompatActivity {
             txtvw.setText("481961");
             MainActivity.user.add(new UserObject("Rick Obama", "481961"));
             exists = true;
-            MainActivity.obama();
+            MainDoctorActivity.obama();
         }
         else {
             TextView txtvw =(TextView)findViewById(R.id.nameData);

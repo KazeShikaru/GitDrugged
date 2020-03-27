@@ -14,7 +14,7 @@ public class CheckUserActivity extends AppCompatActivity {
     }
 
     public void onBackClicked(android.view.View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainDoctorActivity.class);
         startActivity(intent);
     }
 }
