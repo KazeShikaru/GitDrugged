@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="PHGray">#808080</color>
+    <color name="PHDarkGrey">#292929</color>
+    <color name="PHBlack">#1B1B1B</color>
+    <color name="PHOrange">#FFA31A</color>
+    <color name="PHWhite">#ffffff</color>
+</resources>
