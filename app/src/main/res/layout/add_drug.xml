@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/PHDarkGray"
+    android:minHeight="731dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="ADD DRUG"
+                    android:textSize="40dp"
+                    android:textColor="@color/PHOrange"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Drug Name:"
+                    android:textColor="@color/PHOrange"
+                    android:textSize="25dp"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/PHGray"
+                    android:textSize="35dp"
+                    android:hint="Insert Drug Name Here"
+                    android:id="@+id/name"
+                    android:completionThreshold="1"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:inputType="text"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:text="Image:"
+                        android:textColor="@color/PHOrange"
+                        android:textSize="25dp"
+                        android:gravity="center_vertical"/>
+
+                    <ImageButton
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/camera_icon"
+                        android:onClick="camera"
+                        android:id="@+id/camera"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:background="@color/PHDarkGray"/>
+
+                    <Spinner
+                        android:layout_width="150dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/image_spinner"
+                        android:background="@color/PHGray"
+                        android:layout_gravity="center" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:layout_width="220dp"
+                        android:layout_height="match_parent"
+                        android:textSize="25dp"
+                        android:text="Days to Take:"
+                        android:textColor="@color/PHOrange"
+                        android:gravity="center_vertical"/>
+
+                    <EditText
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:inputType="number"
+                        android:background="@color/PHGray"
+                        android:id="@+id/days_to_take"
+                        android:textSize="25dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@color/PHGray"
+                        android:text="Days"
+                        android:textSize="25dp"
+                        android:textColor="@color/PHBlack"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:layout_width="220dp"
+                        android:layout_height="match_parent"
+                        android:textSize="25dp"
+                        android:text="Dosage Frequency:"
+                        android:textColor="@color/PHOrange"
+                        android:gravity="center_vertical"/>
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:text="-"
+                        android:textSize="40dp"
+                        android:background="@color/PHGray"
+                        android:paddingTop="-30dp"
+                        android:onClick="freq_minus"/>
+
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@color/PHGray"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="1/day"
+                        android:textSize="25dp"
+                        android:textColor="@color/PHBlack"
+                        android:id="@+id/freq"/>
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:text="+"
+                        android:textSize="30dp"
+                        android:background="@color/PHGray"
+                        android:paddingTop="-30dp"
+                        android:onClick="freq_plus"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dosage_times"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:textSize="25dp"
+                            android:text="Dose 1 Time:"
+                            android:textColor="@color/PHOrange"
+                            android:gravity="center_vertical"/>
+
+                        <TimePicker
+                            android:layout_width="230dp"
+                            android:layout_height="100dp"
+                            android:timePickerMode="spinner"
+                            android:background="@color/PHGray"
+                            android:numbersTextColor="@color/PHOrange"
+                            android:scaleY="1.4"
+                            android:paddingLeft="-30dp"
+                            android:paddingRight="-10dp"
+                            android:id="@+id/dose1"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <Button
+                    android:onClick="done"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="DONE"
+                    android:textSize="60dp"
+                    android:textColor="@color/PHBlack"
+                    android:background="@color/PHGray"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
