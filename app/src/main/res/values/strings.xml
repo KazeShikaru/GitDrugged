@@ -6,4 +6,6 @@
         <item>anone</item>
         <item>4</item>
     </string-array>
+    <string name="prompt_email">Enter Your Email</string>
+    <string name="prompt_password">Enter Your Password</string>
 </resources>

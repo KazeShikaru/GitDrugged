@@ -50,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void moveToLoginView(View view){
+        Intent intent = new Intent(this, loginOrSignUp.class);
+        startActivity(intent);
+    }
+
     public void moveToDrugsView(View view){
         Intent intent = new Intent(this, YourDrugs.class);
         startActivity(intent);
