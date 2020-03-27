@@ -26,7 +26,11 @@ public class ReminderReturn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reminderchecklist);
-        day = 10;
+
+
+        loadData(this.findViewById(R.id.rem_chk1));
+        //initSetup(this.findViewById(R.id.rem_chk1));
+        day = Integer.parseInt(defaultList[0]);
         drugCount= 4;
 
     }
@@ -40,8 +44,8 @@ public class ReminderReturn extends AppCompatActivity {
 
 
 
-        //initSetup(view);
-        loadData(view);
+
+
         int drugsTakenCurrently=4;
         int drugsTaken = 0;
         CheckBox chk1 = findViewById(R.id.rem_chk1);
@@ -64,6 +68,7 @@ public class ReminderReturn extends AppCompatActivity {
 
     public void moveToMain(View view){
         setContentView(R.layout.activity_main);
+
     }
 
     public void loadData(View view){
@@ -104,7 +109,7 @@ public class ReminderReturn extends AppCompatActivity {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(view.getContext().openFileOutput(filename, view.getContext().MODE_PRIVATE));
             outputStreamWriter.write(s2Write);
             outputStreamWriter.close();
-            
+
         }
         catch (Exception e) {
             e.printStackTrace();
