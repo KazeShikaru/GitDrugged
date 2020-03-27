@@ -15,11 +15,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+
 import static com.example.gitdrugged.App.CHANNEL_1_ID;
 
 public class MainActivity extends AppCompatActivity {
     private NotificationManagerCompat notificationManager;
-
+    public static String pid = "";
+    public static ArrayList<UserObject> user = new ArrayList<UserObject>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         notificationManager = NotificationManagerCompat.from(this);
 
 
+    }
+    public void returnToMain(View view){
+        setContentView(R.layout.activity_main);
+    }
+
+    public void moveToDoctorView(View view){
+
+        setContentView(R.layout.activity_main_doc);
     }
 
     public void moveToCalender(View view){
@@ -78,6 +89,20 @@ public class MainActivity extends AppCompatActivity {
         return "drug1,d,14,drug2,w,2";
 
     }
+    public void onIDAddClicked(View view) {
+        setContentView(R.layout.activity_idadd);
+    }
 
+    public void onQRAddClicked(View view) {
+        setContentView(R.layout.activity_qradd);
+    }
+
+    public void onBackClicked(View view) {
+        setContentView(R.layout.activity_main_doc);
+    }
+
+    public void onImageClicked(View view){
+        setContentView(R.layout.activity_new_doctor);
+    }
 
 }
