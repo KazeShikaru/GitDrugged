@@ -23,6 +23,7 @@ public class profilePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
         final Button logout = (Button) findViewById(R.id.logout);
+        final Button check = (Button) findViewById(R.id.checkDrugs);
         String id = getIntent().getStringExtra("id");
         String allInfo = readFromFile(getApplicationContext());
         String[] infoSplit = allInfo.split("\n");
@@ -35,15 +36,21 @@ public class profilePage extends AppCompatActivity {
                 break;
             }
         }
-        String[] userInfoArray = userInfo.split(", ");
+        final String[] userInfoArray = userInfo.split(", ");
         TextView name = (TextView) findViewById(R.id.nameData1);
         TextView idtxt = (TextView) findViewById(R.id.idData1);
         name.setText(userInfoArray[1]);
         idtxt.setText(userInfoArray[3]);
         logout.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 Intent in = new Intent(profilePage.this, loginOrSignUp.class);
+                startActivity(in);
+            }
+        });
+        check.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent in = new Intent(profilePage.this, YourDrugs.class);
+                in.putExtra("id", userInfoArray[3]);
                 startActivity(in);
             }
         });
