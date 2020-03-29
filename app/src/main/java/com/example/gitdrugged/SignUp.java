@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -37,10 +38,12 @@ public class SignUp extends AppCompatActivity {
                     String id = readFromFile(getApplicationContext());
                     int id_int;
                     try{
-                        id_int = Integer.parseInt(id);
+                        id_int = (int)Double.parseDouble(id);
                     }catch (Exception e){
                         id_int = 111111;
                     }
+                    System.out.println(id);
+                    System.out.println(id_int);
                     if (userName.getText().toString().isEmpty()) {
                         int duration = Toast.LENGTH_SHORT;
                         Context context = getApplicationContext();
@@ -53,7 +56,7 @@ public class SignUp extends AppCompatActivity {
                         Toast.makeText(context, "Invalid Name", duration).show();
                         t = false;
                     }
-                    id_int++;
+                    id_int+=1;
                     Intent intent = new Intent(SignUp.this, loginOrSignUp.class);
                     String message = userName.getText().toString()+ ", " + name.getText().toString()+ ", " + password.getText().toString() + ", "+id_int +", "+ data.getText().toString();
                     message += "\n";
@@ -67,11 +70,13 @@ public class SignUp extends AppCompatActivity {
     }
     private void writeToFile(String data,Context context, String file) {
         try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(file, Context.MODE_APPEND));;
+            FileOutputStream outputStreamWriter = openFileOutput(file, Context.MODE_APPEND);;
             if(file.equals("ids.txt")){
-                outputStreamWriter = new OutputStreamWriter(context.openFileOutput(file, Context.MODE_PRIVATE));
+                outputStreamWriter = openFileOutput(file, Context.MODE_PRIVATE);
             }
-            outputStreamWriter.write(data);
+            System.out.println(data);
+            outputStreamWriter.write(data.getBytes());
+            System.out.println("wtf");
             outputStreamWriter.close();
         }
         catch (IOException e) {

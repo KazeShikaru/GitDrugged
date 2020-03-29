@@ -38,21 +38,19 @@ public class LoginActivity extends AppCompatActivity {
                 String password = passwordEditText.getText().toString();
                 String info = readFromFile(getApplicationContext());
                 String[] infoArr = info.split("\n");
-                for(int i = 0; i<infoArr.length; i++)
-                if(infoArr[i].contains(username)&&infoArr[i].contains(password)){
-                    String[] thispatient = infoArr[i].split(", ");
-                    String pid = thispatient[3];
-                    showLoginFailed("A thing happened");
-                    //Change the .class
-                    Intent in = new Intent(LoginActivity.this, loginOrSignUp.class);
-                    in.putExtra("pid",pid);
-                    startActivity(in);
+                for(int i = 0; i<infoArr.length; i++){
+                    if(infoArr[i].contains(username)&&infoArr[i].contains(password)){
+                        String[] thispatient = infoArr[i].split(", ");
+                        String pid = thispatient[3];
+                        Intent in = new Intent(LoginActivity.this, profilePage.class);
+                        in.putExtra("id", pid);
+                        startActivity(in);
+                    }
+                    else if(i==infoArr.length){
+                        showLoginFailed("Either username does not exist or password does match");
+                    }
                 }
-                else if(i==infoArr.length){
-                    showLoginFailed("Either username does not exist or password does match");
-                }
-                Intent in = new Intent(LoginActivity.this, YourDrugs.class);
-                startActivity(in);
+
             }
         });
     }
@@ -66,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         String ret = "";
 
         try {
-            InputStream inputStream = context.openFileInput("config.txt");
+            InputStream inputStream = context.openFileInput("context.txt");
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
