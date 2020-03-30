@@ -60,7 +60,8 @@ public class YourDrugs extends AppCompatActivity {
                 final float scale = this.getResources().getDisplayMetrics().density; //get dp scale
                 int pixels = (int) (80 * scale + 0.5f);
 
-                view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,pixels));
+                view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT));
+                view.setMinHeight(pixels);
                 view.setText(data.name);
                 view.setTextSize(40);
                 view.setPadding(20,0,0,0);
