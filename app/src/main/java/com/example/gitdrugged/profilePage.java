@@ -26,7 +26,7 @@ public class profilePage extends AppCompatActivity {
         final Button check = (Button) findViewById(R.id.checkDrugs);
         String id = getIntent().getStringExtra("id");
         String allInfo = readFromFile(getApplicationContext());
-        String[] infoSplit = allInfo.split("/n");
+        String[] infoSplit = allInfo.split("☆");
         String userInfo="";
         for(int i = 0; i<infoSplit.length; i++){
             if(infoSplit[i].contains(id)) {
@@ -34,7 +34,7 @@ public class profilePage extends AppCompatActivity {
                 break;
             }
         }
-        final String[] userInfoArray = userInfo.split(", ");
+        final String[] userInfoArray = userInfo.split("★");
         TextView name = (TextView) findViewById(R.id.nameData1);
         TextView idtxt = (TextView) findViewById(R.id.idData1);
         name.setText(userInfoArray[1]);

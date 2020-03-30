@@ -57,7 +57,7 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(context, "Invalid Name", duration).show();
                     t = false;
                 }
-                else if (password.getText().toString().length()<=8){
+                else if (password.getText().toString().length()<8){
                     int duration = Toast.LENGTH_SHORT;
                     Context context = getApplicationContext();
                     Toast.makeText(context, "Invalid password", duration).show();
@@ -66,13 +66,12 @@ public class SignUp extends AppCompatActivity {
                 if (t) {
                     id_int += 1;
                     Intent intent = new Intent(SignUp.this, loginOrSignUp.class);
-                    String message = userName.getText().toString() + ", " + name.getText().toString() + ", " + password.getText().toString() + ", " + id_int + ", " + data.getText().toString();
-                    message += "\n";
+                    String message = userName.getText().toString() + "★" + name.getText().toString() + "★" + password.getText().toString() + "★" + id_int + "★" + data.getText().toString();
+                    message += "☆";
                     writeToFile((id_int + ""), getApplicationContext(), "ids.txt");
                     writeToFile(message, getApplicationContext(), "context.txt");
                     startActivity(intent);
                 }
-                t = true;
             }
         });
     }

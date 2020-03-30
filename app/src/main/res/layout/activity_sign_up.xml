@@ -42,7 +42,6 @@
                 android:autofillHints="@string/prompt_email"
                 android:background="@color/PHOrange"
                 android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress"
                 android:selectAllOnFocus="true"
                 android:textColor="@color/PHBlack"
                 app:layout_constraintStart_toStartOf="parent"

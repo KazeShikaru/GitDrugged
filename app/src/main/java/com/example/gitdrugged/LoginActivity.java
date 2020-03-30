@@ -37,11 +37,11 @@ public class LoginActivity extends AppCompatActivity {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 String info = readFromFile(getApplicationContext());
-                String[] infoArr = info.split("/n");
+                String[] infoArr = info.split("☆");
                 for(int i = 0; i<infoArr.length; i++){
                     if(infoArr[i].contains(username)){
                         if(infoArr[i].contains(password)){
-                            String[] thispatient = infoArr[i].split(", ");
+                            String[] thispatient = infoArr[i].split("★");
                             String pid = thispatient[3];
                             Intent in = new Intent(LoginActivity.this, profilePage.class);
                             in.putExtra("id", pid);
