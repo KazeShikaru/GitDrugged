@@ -26,11 +26,9 @@ public class profilePage extends AppCompatActivity {
         final Button check = (Button) findViewById(R.id.checkDrugs);
         String id = getIntent().getStringExtra("id");
         String allInfo = readFromFile(getApplicationContext());
-        String[] infoSplit = allInfo.split("\n");
+        String[] infoSplit = allInfo.split("/n");
         String userInfo="";
         for(int i = 0; i<infoSplit.length; i++){
-            System.out.println(infoSplit[i]);
-            System.out.println(id);
             if(infoSplit[i].contains(id)) {
                 userInfo = infoSplit[i];
                 break;
