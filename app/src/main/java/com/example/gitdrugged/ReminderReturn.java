@@ -1,5 +1,6 @@
 package com.example.gitdrugged;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -67,7 +68,9 @@ public class ReminderReturn extends AppCompatActivity {
     }
 
     public void moveToMain(View view){
-        setContentView(R.layout.activity_main);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
 
     }
 
