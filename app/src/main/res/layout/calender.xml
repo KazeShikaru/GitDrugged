@@ -15,7 +15,94 @@
         android:fontFamily="@font/headland_one"
         android:text="You have 4 minutes left to live"
         android:textColor="@color/PHOrange" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="4dp">
 
+        <TextView
+            android:id="@+id/rem_txt_cal_Su"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/PHWhite"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_M"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="M"
+            android:textAlignment="center"
+            android:textColor="@color/PHWhite"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_Tu"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="T"
+            android:textAlignment="center"
+            android:textColor="@color/PHWhite"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_W"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="W"
+            android:textAlignment="center"
+            android:textColor="@color/PHWhite"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_Th"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="T"
+            android:textAlignment="center"
+            android:textColor="@color/PHWhite"
+            android:textSize="24sp" />
+        android:text="TextView"
+        android:textColor="@color/PHDarkGrey" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_F"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="F"
+            android:textAlignment="center"
+            android:textColor="@color/PHWhite"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/rem_txt_cal_Sa"
+            android:layout_width="59dp"
+            android:layout_height="match_parent"
+            android:background="@color/PHGray"
+            android:backgroundTint="@color/PHGray"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/PHWhite"
+            android:textSize="24sp" />
+
+
+
+    </TableRow>
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="51dp"
@@ -206,6 +293,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="15"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -216,6 +304,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="16"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -226,6 +315,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="17"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -236,6 +326,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="18"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -246,6 +337,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="19"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -256,6 +348,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="20"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -266,6 +359,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="21"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
     </TableRow>
@@ -286,6 +380,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="22"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -296,6 +391,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="23"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -306,6 +402,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="24"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -316,6 +413,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="25"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -326,6 +424,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="26"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -336,6 +435,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="27"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -346,6 +446,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="28"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
     </TableRow>
@@ -366,6 +467,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="29"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -376,6 +478,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="30"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
         <TextView
@@ -386,6 +489,7 @@
             android:backgroundTint="@color/PHGray"
             android:text="31"
             android:textAlignment="center"
+            android:textColor="@color/PHBlack"
             android:textSize="24sp" />
 
     </TableRow>
