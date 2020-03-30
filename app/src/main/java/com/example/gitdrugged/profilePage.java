@@ -37,8 +37,10 @@ public class profilePage extends AppCompatActivity {
         final String[] userInfoArray = userInfo.split("★");
         TextView name = (TextView) findViewById(R.id.nameData1);
         TextView idtxt = (TextView) findViewById(R.id.idData1);
+        TextView patientdata = (TextView) findViewById(R.id.dataData);
         name.setText(userInfoArray[1]);
         idtxt.setText(userInfoArray[3]);
+        patientdata.setText(userInfoArray[4]);
         logout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent in = new Intent(profilePage.this, loginOrSignUp.class);
