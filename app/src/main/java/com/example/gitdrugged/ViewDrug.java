@@ -94,7 +94,12 @@ public class ViewDrug extends AppCompatActivity {
 
             TextView time = (TextView)view.getChildAt(1);
             int timeInMin = toDisplay.times.get(i-1);
-            String timeDisplay = timeInMin/60 + ":" + timeInMin%60;
+            String timeDisplay = timeInMin/60 + ":";
+            if(timeInMin%60 < 10)
+                timeDisplay += "0" + timeInMin%60;
+            else
+                timeDisplay += timeInMin%60;
+
             time.setText(timeDisplay);
 
             ((LinearLayout)findViewById(R.id.drug_dose_times)).addView(view);
