@@ -100,6 +100,10 @@ public class ReminderReturn extends AppCompatActivity {
         }
         catch (Exception ex) {
             ex.printStackTrace();
+            ((CheckBox) findViewById(R.id.rem_chk1)).setText("No Data");
+            ((CheckBox) findViewById(R.id.rem_chk2)).setVisibility(View.INVISIBLE);
+            ((CheckBox) findViewById(R.id.rem_chk3)).setVisibility(View.INVISIBLE);
+            ((CheckBox) findViewById(R.id.rem_chk4)).setVisibility(View.INVISIBLE);
         }
 
         if(inJson != null) {
