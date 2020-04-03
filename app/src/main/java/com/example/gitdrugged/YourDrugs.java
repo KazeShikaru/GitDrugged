@@ -31,6 +31,14 @@ public class YourDrugs extends AppCompatActivity {
         super.onResume();
         ViewGroup list = findViewById(R.id.drug_list);
         list.removeAllViews();
+        try{
+            Intent intent = getIntent();
+            Bundle bundle = intent.getExtras();
+            uid = Integer.parseInt(bundle.getString("id"));
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
 
 
         Gson gson = new Gson();
@@ -53,28 +61,27 @@ public class YourDrugs extends AppCompatActivity {
         if(inJson != null) {
             datas = gson.fromJson(inJson, listType);
             for(final DrugData data : datas) {
-                if(data.uid != uid)
-                    break;
+                if(data.uid == uid) {
+                    TextView view = new TextView(this);
+                    final float scale = this.getResources().getDisplayMetrics().density; //get dp scale
+                    int pixels = (int) (80 * scale + 0.5f);
 
-                TextView view = new TextView(this);
-                final float scale = this.getResources().getDisplayMetrics().density; //get dp scale
-                int pixels = (int) (80 * scale + 0.5f);
-
-                view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT));
-                view.setMinHeight(pixels);
-                view.setText(data.name);
-                view.setTextSize(40);
-                view.setPadding(20,0,0,0);
-                view.setGravity(Gravity.CENTER_VERTICAL);
-                view.setBackground(getDrawable(R.drawable.back_rec_black));
-                view.setClickable(true);
-                view.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        viewDrug(data.did);
-                    }
-                });
-                list.addView(view);
+                    view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT));
+                    view.setMinHeight(pixels);
+                    view.setText(data.name);
+                    view.setTextSize(40);
+                    view.setPadding(20,0,0,0);
+                    view.setGravity(Gravity.CENTER_VERTICAL);
+                    view.setBackground(getDrawable(R.drawable.back_rec_black));
+                    view.setClickable(true);
+                    view.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+                            viewDrug(data.did);
+                        }
+                    });
+                    list.addView(view);
+                }
             }
         }
     }
