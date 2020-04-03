@@ -23,7 +23,7 @@
         android:id="@+id/test_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test Account Creation"
+        android:text="Test User Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,22 +38,22 @@
         android:text="Test Doctor Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test_2"
         app:layout_constraintVertical_bias="0.142" />
 
-    <Button
-        android:id="@+id/test_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="moveToDrugsView"
-        android:text="Test Drugs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_3"
-        app:layout_constraintVertical_bias="0.091" />
+<!--    <Button-->
+<!--        android:id="@+id/test_4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="moveToDrugsView"-->
+<!--        android:text="Test Drugs"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/test_3"-->
+<!--        app:layout_constraintVertical_bias="0.091" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
