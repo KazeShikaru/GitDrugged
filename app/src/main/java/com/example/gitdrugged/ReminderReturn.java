@@ -3,19 +3,28 @@ package com.example.gitdrugged;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.text.Layout;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationManagerCompat;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReminderReturn extends AppCompatActivity {
     public int day;
@@ -33,7 +42,7 @@ public class ReminderReturn extends AppCompatActivity {
         //initSetup(this.findViewById(R.id.rem_chk1));
         day = Integer.parseInt(defaultList[0]);
         drugCount= 4;
-
+        loadMeds();
     }
 
     public void initSetup(View view){
@@ -73,6 +82,67 @@ public class ReminderReturn extends AppCompatActivity {
 
 
     }
+
+    public void loadMeds(){
+
+        Gson gson = new Gson();
+        List<DrugData> datas = null;
+        String fileName = "drugs.json";
+        String inJson = null;
+        Type listType = new TypeToken<List<DrugData>>(){}.getType();
+        try {
+            InputStream in = openFileInput(fileName);
+            int size = in.available();
+            byte[] buffer = new byte[size];
+            in.read(buffer);
+            in.close();
+            inJson = new String(buffer, "UTF-8");
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        if(inJson != null) {
+            datas = gson.fromJson(inJson, listType);
+            int drugcount = datas.size();
+
+            if(drugcount>0){
+                ((CheckBox) findViewById(R.id.rem_chk1)).setText(datas.get(0).name);
+                drugcount--;
+
+            }
+            if(drugcount>0){
+                ((CheckBox) findViewById(R.id.rem_chk2)).setText(datas.get(1).name);
+                drugcount--;
+
+            }else{
+                ((CheckBox) findViewById(R.id.rem_chk2)).setChecked(true);
+                ((CheckBox) findViewById(R.id.rem_chk2)).setVisibility(View.INVISIBLE);
+            }
+            if(drugcount>0){
+                ((CheckBox) findViewById(R.id.rem_chk3)).setText(datas.get(2).name);
+                drugcount--;
+
+            }else{
+                ((CheckBox) findViewById(R.id.rem_chk3)).setChecked(true);
+                ((CheckBox) findViewById(R.id.rem_chk3)).setVisibility(View.INVISIBLE);
+            }
+            if(drugcount>0){
+                ((CheckBox) findViewById(R.id.rem_chk4)).setText(datas.get(3).name);
+                drugcount--;
+
+            }else{
+                ((CheckBox) findViewById(R.id.rem_chk4)).setChecked(true);
+                ((CheckBox) findViewById(R.id.rem_chk4)).setVisibility(View.INVISIBLE);
+            }
+
+
+
+
+        }
+
+
+    };
 
     public void loadData(View view){
 
